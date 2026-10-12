@@ -1,0 +1,10 @@
+__pycache__/
+build/
+dist/
+portable/
+*.spec
+*.log
+*.tmp
+# archivos que genera el programa en cada PC
+rutas.json
+diagnostico.txt

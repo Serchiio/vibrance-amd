@@ -1,0 +1,12 @@
+{
+  "intervalo_segundos": 1.0,
+  "escritorio": {
+    "activo": false
+  },
+  "perfiles": {
+    "VALORANT-Win64-Shipping.exe": { "nombre": "Valorant", "saturacion": 190, "contraste": 110 },
+    "cs2.exe": { "nombre": "Counter-Strike 2", "saturacion": 170, "contraste": 105 },
+    "r5apex.exe": { "nombre": "Apex Legends", "saturacion": 170, "contraste": 105 },
+    "r5apex_dx12.exe": { "nombre": "Apex Legends (DX12)", "saturacion": 170, "contraste": 105 }
+  }
+}
