@@ -24,7 +24,7 @@ Sube la saturación (o brillo, contraste, tono, temperatura) **solo mientras un 
 ![Ajustes](docs/captura-ajustes.png)
 
 ## Uso
-1. Compila/descarga `VibranceAMD.exe` (ver *Compilar*) y ábrelo junto a su `config.json` (es portable).
+1. Compila `VibranceAMD` (ver *Compilar*) y abre `VibranceAMD.exe` de esa carpeta (es portable: su `config.json` está al lado).
 2. Doble clic en el icono de la bandeja → **Configuración** → **＋ Agregar programa**: elige el juego de la lista de programas abiertos y un nivel.
 3. Ajusta lo que quieras y pulsa **Guardar y aplicar** (se aplica solo, sin reiniciar).
 
@@ -82,7 +82,7 @@ Usa **ADL**, la librería de AMD que instala el driver Adrenalin. **Probado úni
 [Issue](../../issues). Desde el código fuente, `python vibrance_amd.py --test` comprueba que ADL puede leer, cambiar y restaurar cada ajuste.
 
 ## Compilar
-Requiere Python 3.9+ de 64 bits: ejecuta `build.bat` (genera `portable\VibranceAMD.exe`). Desde código: `pip install pystray pillow` y `python vibrance_amd.py`.
+Requiere Python 3.9+ de 64 bits: ejecuta `build.bat` (genera la carpeta `portable\VibranceAMD\`, con `VibranceAMD.exe` dentro; se compila como carpeta y no como un único `.exe` para que no le afecten los limpiadores de archivos temporales de Windows). Desde código: `pip install pystray pillow` y `python vibrance_amd.py`.
 
 ## Aviso importante
 Este programa **solo cambia el color a través del driver de AMD**; no modifica ni lee ningún juego. Aun así, **no hay garantía**

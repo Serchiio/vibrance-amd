@@ -11,7 +11,7 @@ import atexit, ctypes, json, os, re, subprocess, sys, threading, time, winreg
 from ctypes import wintypes
 
 APP = "Vibrance AMD"
-VERSION = "1.2.0"
+VERSION = "1.2.1"
 URL_ORIGINAL = "https://github.com/Serchiio/vibrance-amd"   # proyecto original (ver NOTICE)
 LICENCIA = "Apache-2.0"
 if getattr(sys, "frozen", False):
@@ -1731,7 +1731,10 @@ def main():
 
     def abrir_config(icon, item):
         cmd = [sys.executable] if getattr(sys, "frozen", False) else [sys.executable, os.path.abspath(__file__)]
-        subprocess.Popen(cmd + ["--gui"], creationflags=0x08000000)
+        # entorno propio: sin esto, una version de un solo .exe reutilizaria la carpeta temporal de la bandeja
+        # y fallaria ("Failed to import encodings module") si algo la limpia mientras el programa sigue abierto
+        entorno = dict(os.environ, PYINSTALLER_RESET_ENVIRONMENT="1")
+        subprocess.Popen(cmd + ["--gui"], creationflags=0x08000000, env=entorno)
 
     def agregar_actual(icon, item):
         def tarea():
