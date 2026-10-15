@@ -11,7 +11,7 @@ import atexit, ctypes, json, os, re, subprocess, sys, threading, time, winreg
 from ctypes import wintypes
 
 APP = "Vibrance AMD"
-VERSION = "1.2.1"
+VERSION = "1.2.2"
 URL_ORIGINAL = "https://github.com/Serchiio/vibrance-amd"   # proyecto original (ver NOTICE)
 LICENCIA = "Apache-2.0"
 if getattr(sys, "frozen", False):
@@ -1096,7 +1096,7 @@ def abrir_gui():
     # ---------------- lista de perfiles (izquierda)
     izq = ttk.Frame(raiz, padding=(10, 10, 4, 10))
     izq.pack(side="left", fill="y")
-    ttk.Label(izq, text="Perfiles", style="Titulo.TLabel").pack(anchor="w", pady=(0, 6))
+    ttk.Label(izq, text="Aplicaciones", style="Titulo.TLabel").pack(anchor="w", pady=(0, 6))
     marco_l = ttk.Frame(izq)
     marco_l.pack(fill="both", expand=True)
     lista = ttk.Treeview(marco_l, show="tree", selectmode="browse", height=14)
